@@ -1,0 +1,77 @@
+.nutrition-trends-page { --nutrition-protein: #60a5fa; --nutrition-carbs: #34d399; --nutrition-fat: #fbbf24; }
+.nutrition-hero .page-title p { margin: 12px 0 0; font-size: 14px; color: var(--muted); }
+.nutrition-week-controls { flex-shrink: 0; }
+.nutrition-week-controls > label { display: block; margin-bottom: 8px; color: var(--muted); font-size: 12px; }
+.nutrition-week-controls > div { display: flex; gap: 6px; align-items: stretch; }
+.nutrition-week-controls button, .nutrition-error button { min-width: 40px; min-height: 44px; padding: 6px 12px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--surface); cursor: pointer; font-size: 20px; }
+.nutrition-week-controls button:hover:not(:disabled) { background: var(--surface-hover); }
+.nutrition-week-controls .nutrition-this-week, .nutrition-error button { font-size: 12px; white-space: nowrap; }
+.nutrition-week-controls input { width: 154px; min-height: 44px; font-size: 13px; }
+.nutrition-week-controls button:disabled { opacity: .35; cursor: default; }
+.nutrition-week-heading { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 8px 20px; margin-bottom: 18px; }
+.nutrition-week-heading h2 { margin: 0; font-size: 17px; font-weight: 550; }
+.nutrition-week-heading > span { color: var(--muted); font-size: 12px; }
+.nutrition-method { margin: 16px 0 24px; color: var(--muted); font-size: 12px; line-height: 1.7; }
+.nutrition-method a, .nutrition-empty a { color: var(--accent-hover); text-underline-offset: 3px; }
+.nutrition-chart-grid, .nutrition-detail-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--layout-gap); margin-top: var(--layout-gap); align-items: stretch; }
+.nutrition-chart-grid .chart-panel, .nutrition-detail-grid .chart-panel { margin: 0; }
+.nutrition-trends-page .chart-panel-header { min-height: 88px; padding: 18px 20px; }
+.nutrition-trends-page .chart-panel-header p { margin: 6px 0 0; font-size: 12px; color: var(--muted); }
+.nutrition-trends-page .chart-panel-header select { min-height: 40px; width: 150px; font-size: 12px; }
+.nutrition-chart-legend { min-height: 46px; padding: 12px 20px 4px; display: flex; align-items: center; flex-wrap: wrap; gap: 8px 20px; color: var(--muted); font-size: 11px; }
+.nutrition-chart-legend span { display: inline-flex; align-items: center; gap: 7px; }
+.nutrition-chart-legend i { width: 10px; height: 10px; border-radius: 2px; }
+.nutrition-chart-legend .nutrition-target-key { width: 17px; height: 0; border-top: 2px dashed var(--chart, var(--accent)); border-radius: 0; }
+.nutrition-week-chart { display: block; width: 100%; height: 280px; }
+.nutrition-chart-unit, .nutrition-chart-missing { fill: var(--muted); font-size: 11px; }
+.nutrition-chart-missing { text-anchor: middle; font-size: 16px; }
+.nutrition-chart-date { fill: var(--subtle); font-size: 10px; }
+.nutrition-chart-day { cursor: pointer; }
+.nutrition-chart-hit { fill: transparent; }
+.nutrition-chart-day[aria-pressed=true] .nutrition-chart-hit { fill: color-mix(in srgb, var(--fg) 6%, transparent); }
+.nutrition-chart-day:focus-visible { outline: none; }
+.nutrition-chart-day:focus-visible .nutrition-chart-hit { stroke: var(--accent); stroke-width: 1.5; }
+.nutrition-chart-target { pointer-events: none; }
+.nutrition-chart-target .goal-line { stroke-width: 1.5; }
+.nutrition-chart-readout { min-height: 80px; padding: 12px 20px; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 4px; font-size: 12px; }
+.nutrition-chart-readout strong { font-weight: 500; }
+.nutrition-chart-readout span { color: var(--muted); }
+.nutrition-detail-grid { grid-template-columns: minmax(0, 1fr); }
+.nutrition-history-panel { overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--surface); }
+.nutrition-table-scroll { overflow-x: auto; overscroll-behavior-x: contain; }
+.nutrition-history-table { width: 100%; min-width: 790px; border-collapse: collapse; font-size: 12px; font-variant-numeric: tabular-nums; }
+.nutrition-history-table th, .nutrition-history-table td { padding: 12px 14px; text-align: right; border-bottom: 1px solid var(--border); }
+.nutrition-history-table th:first-child { text-align: left; min-width: 145px; }
+.nutrition-history-table thead { background: var(--surface-raised); }
+.nutrition-history-table thead th { color: var(--muted); font-size: 11px; font-weight: 500; }
+.nutrition-history-table tbody th { font-weight: 400; }
+.nutrition-history-table tbody th strong { font-weight: 500; white-space: nowrap; }
+.nutrition-history-table tbody th span { color: var(--muted); margin-left: 6px; }
+.nutrition-history-table small { display: block; margin-top: 3px; color: var(--muted); font-size: 10px; font-weight: 400; }
+.nutrition-history-table tr.is-today { background: color-mix(in srgb, var(--accent) 6%, var(--surface)); }
+.nutrition-history-table tr[data-status=future] { color: var(--muted); }
+.nutrition-history-table tfoot { background: var(--surface-raised); font-weight: 550; }
+.nutrition-history-table tfoot th, .nutrition-history-table tfoot td { border-bottom: 0; }
+.nutrition-loading, .nutrition-empty { min-height: 140px; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 12px; padding: 24px; color: var(--muted); font-size: 13px; }
+.nutrition-empty { min-height: 100px; flex-direction: column; border: 1px dashed var(--border); border-radius: var(--radius-lg); text-align: center; }
+.nutrition-empty strong { color: var(--fg); }
+.nutrition-error { justify-content: space-between; }
+@media (min-width: 90rem) {
+  .nutrition-detail-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .nutrition-detail-panel { display: flex; flex-direction: column; }
+  .nutrition-detail-panel .nutrition-chart-body { flex: 1; display: flex; flex-direction: column; }
+  .nutrition-detail-panel .nutrition-week-chart { flex: 1; min-height: 280px; }
+}
+@media (max-width: 56rem) {
+  .nutrition-chart-grid { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 37.5rem) {
+  .nutrition-week-controls { width: 100%; }
+  .nutrition-week-controls > div { flex-wrap: wrap; }
+  .nutrition-week-controls input { flex: 1; }
+  .nutrition-week-controls .nutrition-this-week { flex-basis: 100%; }
+  .nutrition-trends-page .chart-panel-header { padding-inline: 16px; }
+  .nutrition-chart-legend, .nutrition-chart-readout { padding-inline: 16px; }
+  .nutrition-trends-page .trend-stat-grid strong { font-size: 24px; }
+  .nutrition-trends-page .trend-stat-grid small { display: block; margin: 6px 0 0; }
+}

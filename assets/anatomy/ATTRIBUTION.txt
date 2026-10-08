@@ -1,0 +1,31 @@
+BodyParts3D, © The Database Center for Life Science.
+Licensed under Creative Commons Attribution 4.0 International.
+https://creativecommons.org/licenses/by/4.0/
+https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+
+Source: BodyParts3D 4.0, via Human Atlas:
+https://github.com/ashemag/human-atlas
+https://github.com/ashemag/human-atlas/blob/main/public/ATTRIBUTION.md
+Downloaded October 7, 2026.
+
+Human Atlas adaptations: units/axes converted, geometry simplified with
+meshoptimizer (0.2% relative error), normals quantized, binary packaging.
+
+MacroTracker adaptations: selected back/shoulder structures, torso cropping,
+surface subdivision and smooth shading, neutral context materials, thin
+trapezius center seam, workout group/region metadata, Blender/glTF export.
+Source IDs are preserved in glTF extras and the editable source manifest.
+No endorsement by the original creators is implied.
+
+Full-body model adaptations (October 7, 2026): selected limb, chest, gluteal,
+back and neck anatomy; smoothing and mesh simplification; shared continuous
+trapezius from the approved preview; neutral head/hands/feet and interior shell;
+closed medial chest spacing; lateral external-oblique sheet trimmed to expose
+the rectus region; neutral pelvis without external genital details.
+
+Latissimus, abdominal training regions, multifidus, quadratus lumborum and the
+internal-oblique sheet are schematic adaptations fitted to the source envelope,
+not original named source meshes. Gluteus medius/minimus posterior and lateral
+portions represent the app's separate glute/abductor accounting groups, not
+additional anatomical muscles. Whole and head views share the same allocation
+data. The complete model loads one regional GLB and recolors by group as needed.

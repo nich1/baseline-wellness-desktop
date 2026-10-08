@@ -1,0 +1,18 @@
+[
+  {
+    "mode": "muscles",
+    "meshes": 41,
+    "triangles": 333006,
+    "areas": 20,
+    "megabytes": 6.81,
+    "height": 1.792
+  },
+  {
+    "mode": "regions",
+    "meshes": 113,
+    "triangles": 333006,
+    "areas": 56,
+    "megabytes": 6.7,
+    "height": 1.792
+  }
+]
